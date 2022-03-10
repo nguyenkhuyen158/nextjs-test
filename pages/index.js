@@ -10,11 +10,6 @@ let Content = dynamic(() => import('../components/content.js'), {
 });
 
 export default function Home() {
-    const [editorState, setEditorState] = useState(() => EditorState.createEmpty())
-    const handleEditorChange = (state) => {
-    Alert('chào');
-    
-  }
 
   return (
 
