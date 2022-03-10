@@ -1,8 +1,21 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import {useState} from 'react'
+import { EditorState, convertToRaw } from 'draft-js';
+import dynamic from "next/dynamic";
+
+let Content = dynamic(() => import('../components/content.js'), {
+    ssr: false
+});
 
 export default function Home() {
+    const [editorState, setEditorState] = useState(() => EditorState.createEmpty())
+    const handleEditorChange = (state) => {
+    Alert('chào');
+    
+  }
+
   return (
 
     <>
@@ -27,6 +40,10 @@ export default function Home() {
     </button>
     </div>
     </header>
+    
+    <Content
+      />
+
     </>
     )
   }
