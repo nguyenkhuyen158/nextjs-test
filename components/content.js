@@ -11,7 +11,7 @@ import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
 
 
-const Content = (editorState, handleEditorChange) => {
+const Content = () => {
   const [editorState, setEditorState] = useState(
     () => EditorState.createEmpty(),
     );
